@@ -6,7 +6,7 @@ import re
 # Compiles regular expression pattern into a reusable regular expression object
 WORD_RE     = re.compile(r"[\w']+")
 
-class invertedIndex(MRJOb):
+class invertedIndexing(MRJOb):
     def steps(self):
         return [MRStep(mapper = self.map_word_index, reducer = self.reduce_word_index_list)]
     
@@ -23,5 +23,5 @@ class invertedIndex(MRJOb):
         yield(word.lower(), indexNumbersList)
 
 if __name__ == '__main__':
-    invertedIndex.run()
+    invertedIndexing.run()
 
