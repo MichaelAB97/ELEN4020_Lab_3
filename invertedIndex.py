@@ -1,12 +1,12 @@
 # Import mrjob, mrstep and regular expressions modules
-from mrjob.job import MRJOb
-from mrstep.step import MRStep
+from mrjob.job  import MRJob
+from mrjob.step import MRStep
 import re
 
 # Compiles regular expression pattern into a reusable regular expression object
 WORD_RE     = re.compile(r"[\w']+")
 
-class invertedIndexing(MRJOb):
+class invertedIndexing(MRJob):
     def steps(self):
         return [MRStep(mapper = self.map_word_index, reducer = self.reduce_word_index_list)]
     
