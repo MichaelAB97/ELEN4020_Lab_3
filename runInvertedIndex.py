@@ -1,7 +1,7 @@
+# Imports job class, invertedIndexing
+from invertedIndex import invertedIndexing
 import sys
 import time
-# Imports job class
-from invertedIndex import invertedIndexing
 
 # Tuple to store the word and index number pair
 wordIndexNumber = []
