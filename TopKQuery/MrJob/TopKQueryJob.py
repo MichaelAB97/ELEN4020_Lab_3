@@ -17,7 +17,6 @@ class MRTopKWordQuery(MRJob):
 	# Yeilds the lowercase word, when the word 
 	# in each line is not a stop word or an integer
 	def mapper_get_words(self, _, line):
-		# yield each word in the line
 		for word in WORD_RE.findall(line):
 			if word.lower() not in STOP_WORDS:
 				if not word.isdigit():
