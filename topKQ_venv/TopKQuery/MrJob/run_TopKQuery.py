@@ -1,4 +1,3 @@
-# Run this file only: python3 run_TopKQuery.py small.txt
 from TopKQueryJob import MRTopKWordQuery
 import sys
 import time

@@ -1,5 +1,3 @@
-# Run this code second
-# To run: python3 MrsTopKQuery.py small.txt output
 import sys
 import shutil, os
 import time
