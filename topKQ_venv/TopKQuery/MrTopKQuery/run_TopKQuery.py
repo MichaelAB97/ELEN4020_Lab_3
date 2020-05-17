@@ -1,3 +1,4 @@
+# Run this file only: python3 run_TopKQuery.py small.txt
 from TopKQueryJob import MRTopKWordQuery
 import sys
 import time
@@ -17,7 +18,7 @@ def TopKWordsAlg(word_count_pairs, k):
 word_count_pairs = []
 
 # Starts the process timer
-startTime = time.process_time()
+startTime = time.time()
 
 # Run the program locally
 job_args = ['-r', 'local']
@@ -34,7 +35,7 @@ with mr_job.make_runner() as runner:
 	TopKWordsAlg(word_count_pairs, 20)
 
 	# Stops the process timer
-	endTime = time.process_time()
+	endTime = time.time()
 	processTime = endTime - startTime
 
 	

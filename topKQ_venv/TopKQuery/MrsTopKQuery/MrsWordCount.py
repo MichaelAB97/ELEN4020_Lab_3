@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# Run this code first, then run MrsTopKQuery.py
+# To run this code: python3 MrsWordCount.py small.txt output
 import mrs
 import string
 import re
