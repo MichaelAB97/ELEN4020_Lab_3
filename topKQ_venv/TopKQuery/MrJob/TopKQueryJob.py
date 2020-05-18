@@ -3,6 +3,9 @@ from mrjob.step import MRStep
 import re
 import os
 
+# Default English stopwords list
+# from https://www.ranks.nl/stopwords
+
 def getStopWords():
 	return [ "a", "about", "above", "after", "again", 
 	"against", "all", "am", "an", "and", "any", "are", 
