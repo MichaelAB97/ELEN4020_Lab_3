@@ -2,6 +2,7 @@ from mrjob.job  import MRJob
 from mrjob.step import MRStep
 import re
 import os
+import string
 
 # Default English stopwords list
 # from https://www.ranks.nl/stopwords
@@ -44,9 +45,13 @@ class MRTopKWordQuery(MRJob):
 	# in each line is not a stop word or an integer
 	def mapper_get_words(self, _, line):
 		for word in WORD_RE.findall(line):
+			#Converts every punctuation mark found into an !
+			#word = word.translate(str.maketrans(string.punctuation, "!?@"*len(string.punctuation)))
 			if word.lower() not in STOP_WORDS:
 				if not word.isdigit():
-					yield (word.lower(), 1)
+					# Yeilds an output that is 
+					if word not in string.punctuation:
+						yield (word.lower(), 1)
 			
 	# Sums the words that have already been read
 	def combiner_count_words(self, word, counts):
