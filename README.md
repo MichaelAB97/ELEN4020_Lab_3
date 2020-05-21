@@ -13,7 +13,7 @@ The algorithms for this lab is written in Python 3
 The requirements for the virtual environment can be found in requirements.txt
 
 Please ensure that the following are installed:
-- `Python 3.8`
+- `Python 3.6+`
 - `pip3`
 - `virtualenv`
 
