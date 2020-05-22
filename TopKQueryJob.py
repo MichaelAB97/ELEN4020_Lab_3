@@ -31,6 +31,7 @@ def getStopWords():
 	"why's", "with", "would", "you", "you'd", "you'll", "you're", 
 	"you've", "your", "yours", "yourself", "yourselves" ]
 
+
 STOP_WORDS = getStopWords()
 WORD_RE    = re.compile(r"[\w']+")
 

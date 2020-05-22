@@ -2,11 +2,12 @@
 ## Word Index
 This was implemented using the mrs MapReduce framework
 This can be run by running the runWordIndex.py file in terminal, which automatically searches through all three files - small.txt, large.txt and very_large.txt.
-It also makes use of the stopWords.txt file.
+It also makes use of the `stopWords.txt` file.
 The results are stored in their respective output folders.
 
 ## Top-K Query & Word Count
 These algorithms were implemented using the MrJob Framework
+- The stopwords used for the algorithms in this implementation are located in `stopwords_en.txt`
 
 ## Build Instructions
 The algorithms for this lab is written in Python 3
@@ -34,3 +35,4 @@ Please ensure that the following are installed:
 - Word Count: `python3 runWordFiles`
 - Top-K Query: `python3 runTopKFiles`
 - Inverted Index: `python3 runWordIndex.py`
+
